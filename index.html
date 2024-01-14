@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<script>
+  import {initializeApp} from "firebase/app";
+  import {getStorage} from "firebase/storage";
+
+
+  import {initializeApp} from "firebase/app";
+  import {getStorage} from "firebase/storage";
+
+  // TODO: Replace the following with your app's Firebase project configuration
+  // See: https://firebase.google.com/docs/web/learn-more#config-object
+  const firebaseConfig = {
+    apiKey: "API_KEY",
+    authDomain: "smcs-house-point-recorder.firebaseapp.com",
+    // The value of `databaseURL` depends on the location of the database
+    databaseURL: "https://DATABASE_NAME.firebaseio.com",
+    projectId: "smcs-house-point-recorder",
+    storageBucket: "smcs-house-point-recorder.appspot.com",
+    messagingSenderId: "SENDER_ID",
+    appId: "APP_ID",
+    // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+    measurementId: "G-MEASUREMENT_ID",
+  };
+  storageBucket: 'smcs-house-point-recorder.appspot.com'
+
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+
+  // Initialize Cloud Storage and get a reference to the service
+  const storage = getStorage(app);
+
+  import { getStorage, ref } from "firebase/storage";
+
+// Get a reference to the storage service, which is used to create references in your storage bucket
+const storage = getStorage();
+
+// Create a storage reference from our storage service
+const storageRef = ref(storage);
+
+</script>
+</head>
+
+<script>
+  function CheckHopp() {
+    if (typeof (Storage) !== "undefined") {
+      if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount);
+      } else {
+        localStorage.clickcount = 1;
+      }
+      document.getElementById("result").innerHTML = "Hopperton Points: " + localStorage.clickcount;
+    } else {
+      document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+    }
+  }
+  function AddFiveHopp() {
+    if (typeof (Storage) !== "undefined") {
+      if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount) + 5;
+      } else {
+        localStorage.clickcount = 1;
+      }
+      document.getElementById("result").innerHTML = "Hopperton Points: " + localStorage.clickcount;
+    } else {
+      document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+    }
+  }
+  function AddTenHopp() {
+    if (typeof (Storage) !== "undefined") {
+      if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount) + 10;
+      } else {
+        localStorage.clickcount = 1;
+      }
+      document.getElementById("result").innerHTML = "Hopperton Points: " + localStorage.clickcount;
+    } else {
+      document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+    }
+  }
+
+  function RemOneHopp() {
+    if (typeof (Storage) !== "undefined") {
+      if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount) - 1;
+      } else {
+        localStorage.clickcount = 1;
+      }
+      document.getElementById("result").innerHTML = "Hopperton Points: " + localStorage.clickcount;
+    } else {
+      document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+    }
+  }
+
+</script>
+</head>
+
+<body>
+  <h1> House Point Recorder </h1>
+
+  <body> By Aidan Wong </body>
+  <p><button onclick="CheckHopp()" type="button">Check Hopperton points</button>
+    <button onclick="AddFiveHopp()" type="button">Add 5 points to Hopperton</button>
+    <button onclick="AddTenHopp()" type="button">Add 10 points to Hopperton</button>
+    <button onclick="RemOneHopp()" type="button">Remove 1 point from Hopperton</button>
+  </p>
+  <p><button onclick="CheckRon()" type="button">Check Ronan points</button>
+    <button onclick="AddFiveRon()" type="button">Add 5 points to Ronan</button>
+    <button onclick="AddTenRon()" type="button">Add 10 points to Ronan</button>
+    <button onclick="RemOneRon()" type="button">Remove 1 point from Ronan</button>
+  </p>
+  <p><button onclick="CheckMan()" type="button">Check Mann points</button>
+    <button onclick="AddFiveMan()" type="button">Add 5 points to Mann</button>
+    <button onclick="AddTenMan()" type="button">Add 10 points to Mann</button>
+    <button onclick="RemOneMan()" type="button">Remove 1 point from Mann</button>
+  </p>
+  <p><button onclick="CheckArm()" type="button">Check Armstrong points</button>
+    <button onclick="AddFiveArm()" type="button">Add 5 points to Armstrong</button>
+    <button onclick="AddTenArm()" type="button">Add 10 points to Armstrong</button>
+    <button onclick="RemOneArm()" type="button">Remove 1 point from Armstrong</button>
+  </p>
+
+  <p><button onclick="CheckAll()" type="button">Check all points</button>
+  </p>
+  <div id="result"></div>
+
+  <script>
+    function CheckRon() {
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.clickcountr) {
+          localStorage.clickcountr = Number(localStorage.clickcountr);
+        } else {
+          localStorage.clickcountr = 1;
+        }
+        document.getElementById("result").innerHTML = "Ronan Points: " + localStorage.clickcountr;
+      } else {
+        document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+      }
+    }
+    function AddFiveRon() {
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.clickcountr) {
+          localStorage.clickcountr = Number(localStorage.clickcountr) + 5;
+        } else {
+          localStorage.clickcountr = 1;
+        }
+        document.getElementById("result").innerHTML = "Ronan Points: " + localStorage.clickcountr;
+      } else {
+        document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+      }
+    }
+    function AddTenRon() {
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.clickcountr) {
+          localStorage.clickcountr = Number(localStorage.clickcountr) + 10;
+        } else {
+          localStorage.clickcountr = 1;
+        }
+        document.getElementById("result").innerHTML = "Ronan Points: " + localStorage.clickcountr;
+      } else {
+        document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+      }
+    }
+
+    function RemOneRon() {
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.clickcountr) {
+          localStorage.clickcountr = Number(localStorage.clickcountr) - 1;
+        } else {
+          localStorage.clickcountr = 1;
+        }
+        document.getElementById("result").innerHTML = "Ronan Points: " + localStorage.clickcountr;
+      } else {
+        document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+      }
+    }
+
+  </script>
+  </head>
+
+  <body>
+
+    <script>
+      function CheckMan() {
+        if (typeof (Storage) !== "undefined") {
+          if (localStorage.clickcountm) {
+            localStorage.clickcountm = Number(localStorage.clickcountm);
+          } else {
+            localStorage.clickcountm = 1;
+          }
+          document.getElementById("result").innerHTML = "Mann Points: " + localStorage.clickcountm;
+        } else {
+          document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+        }
+      }
+      function AddFiveMan() {
+        if (typeof (Storage) !== "undefined") {
+          if (localStorage.clickcountm) {
+            localStorage.clickcountm = Number(localStorage.clickcountm) + 5;
+          } else {
+            localStorage.clickcountm = 1;
+          }
+          document.getElementById("result").innerHTML = "Mann Points: " + localStorage.clickcountm;
+        } else {
+          document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+        }
+      }
+      function AddTenMan() {
+        if (typeof (Storage) !== "undefined") {
+          if (localStorage.clickcountm) {
+            localStorage.clickcountm = Number(localStorage.clickcountm) + 10;
+          } else {
+            localStorage.clickcountm = 1;
+          }
+          document.getElementById("result").innerHTML = "Mann Points: " + localStorage.clickcountm;
+        } else {
+          document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+        }
+      }
+
+      function RemOneMan() {
+        if (typeof (Storage) !== "undefined") {
+          if (localStorage.clickcountm) {
+            localStorage.clickcountm = Number(localStorage.clickcountm) - 1;
+          } else {
+            localStorage.clickcountm = 1;
+          }
+          document.getElementById("result").innerHTML = "Mann Points: " + localStorage.clickcountm;
+        } else {
+          document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+        }
+      }
+
+    </script>
+    </head>
+
+    <body>
+
+      <script>
+        function CheckArm() {
+          if (typeof (Storage) !== "undefined") {
+            if (localStorage.clickcounta) {
+              localStorage.clickcounta = Number(localStorage.clickcounta);
+            } else {
+              localStorage.clickcounta = 1;
+            }
+            document.getElementById("result").innerHTML = "Armstrong Points: " + localStorage.clickcounta;
+          } else {
+            document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+          }
+        }
+        function AddFiveArm() {
+          if (typeof (Storage) !== "undefined") {
+            if (localStorage.clickcounta) {
+              localStorage.clickcounta = Number(localStorage.clickcounta) + 5;
+            } else {
+              localStorage.clickcounta = 1;
+            }
+            document.getElementById("result").innerHTML = "Armstrong Points: " + localStorage.clickcounta;
+          } else {
+            document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+          }
+        }
+        function AddTenArm() {
+          if (typeof (Storage) !== "undefined") {
+            if (localStorage.clickcounta) {
+              localStorage.clickcounta = Number(localStorage.clickcounta) + 10;
+            } else {
+              localStorage.clickcounta = 1;
+            }
+            document.getElementById("result").innerHTML = "Armstrong Points: " + localStorage.clickcounta;
+          } else {
+            document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+          }
+        }
+
+        function RemOneArm() {
+          if (typeof (Storage) !== "undefined") {
+            if (localStorage.clickcounta) {
+              localStorage.clickcounta = Number(localStorage.clickcounta) - 1;
+            } else {
+              localStorage.clickcounta = 1;
+            }
+            document.getElementById("result").innerHTML = "Armstrong Points: " + localStorage.clickcounta;
+          } else {
+            document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+          }
+        }
+      </script>
+      </head>
+
+    </body>
+
+    <body>
+
+      <head>
+        <script>
+          function CheckAll() {
+            if (typeof (Storage) !== "undefined") {
+              if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount);
+              } else {
+                localStorage.clickcount = 1;
+              }
+              document.getElementById("result").innerHTML = "Hopperton Points: " + localStorage.clickcount + "<br />" + "Ronan Points: " + localStorage.clickcountr + "<br />" + "Mann Points: " + localStorage.clickcountm + "<br />" + "Armstrong Points: " + localStorage.clickcounta;
+            } else {
+              document.getElementById("result").innerHTML = "Get off Internet Explorer lol";
+            }
+          }
+        </script>
+    </body>
+    </head>
